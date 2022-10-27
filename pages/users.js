@@ -21,11 +21,11 @@ const Users = () => {
 
     return (
         <Layout>
-            <div className="grid grid-cols-2 gap-4">
-                <div className="border">
+            <div className="grid grid-cols-3 gap-4">
+                <div className="">
                     {users?.map(handleRender)}
                 </div>
-                <div className="border mx-auto">
+                <div className="mx-auto w-full col-span-2">
                     {
                         selected &&
                         <Profile item={selected} />

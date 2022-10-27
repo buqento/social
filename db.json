@@ -53,22 +53,30 @@
         {
             "userId": 1,
             "id": 1,
-            "title": "quidem molestiae enim"
+            "title": "quidem molestiae enim",
+            "thumbnailUrl": "https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg",
+            "createdAt": 1666863190
         },
         {
             "userId": 1,
             "id": 2,
-            "title": "sunt qui excepturi placeat culpa"
+            "title": "sunt qui excepturi placeat culpa",
+            "thumbnailUrl": "https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg",
+            "createdAt": 1666837333
         },
         {
             "userId": 1,
             "id": 3,
-            "title": "omnis laborum odio"
+            "title": "omnis laborum odio",
+            "thumbnailUrl": "https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg",
+            "createdAt": 1666837333
         },
         {
-            "userId": 1,
+            "userId": 2,
             "id": 4,
-            "title": "non esse culpa molestiae omnis sed optio"
+            "title": "non esse culpa molestiae omnis sed optio",
+            "thumbnailUrl": "https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg",
+            "createdAt": 1666837333
         }
     ],
     "photos": [
@@ -77,14 +85,16 @@
             "id": 1,
             "title": "accusamus beatae ad facilis cum similique qui sunt",
             "url": "https://via.placeholder.com/600/92c952",
-            "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+            "thumbnailUrl": "https://via.placeholder.com/150/92c952",
+            "createdAt": 1666837333
         },
         {
             "albumId": 1,
             "id": 2,
             "title": "reprehenderit est deserunt velit ipsam",
             "url": "https://via.placeholder.com/600/771796",
-            "thumbnailUrl": "https://via.placeholder.com/150/771796"
+            "thumbnailUrl": "https://via.placeholder.com/150/771796",
+            "createdAt": 1666837333
         }
     ],
     "users": [
