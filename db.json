@@ -1,118 +1,128 @@
 {
-    "posts": [
-        {
-            "userId": 1,
-            "id": 1,
-            "title": "Selalu ada hal baik, meski dalam keburukan sekalipun. Manfaatkan."
-        },
-        {
-            "userId": 1,
-            "id": 2,
-            "title": "Are you a Senior Software Engineer, freelance developer or just a highly ambitious developer living outside the U.S.?"
-        },
-        {
-            "userId": 1,
-            "id": 3,
-            "title": "Manfaatkan waktumu untuk bisa upgrade skill untuk bisa mendapatkan skill yang tahan terhadap terhadap resesi. dan salah satu skill itu adalah programmer. KELASFULLSTACK kode kupon yang kita siapkan untuk kamu yang siap belajar hal baru dan skill yang tahan resesi. ada potingan 15% yuk join sekarang juga!!"
-        },
-        {
-            "userId": 1,
-            "id": 4,
-            "title": "Di kontrakan rumah 2 lantai dengan kmrtdr 3.kmar mandi 2...akses masuk hanya sepeda motor..area pelemgurih gamping Sleman belakang Honda naga mas motor..harga 8jt/th"
-        },
-        {
-            "userId": 2,
-            "id": 5,
-            "title": "WingtraOne is an easy-to-use mapping drone that gives you consistent, high-accuracy survey data while cutting costs."
-        }
-    ],
-    "comments": [
-        {
-            "postId": 1,
-            "id": 1,
-            "name": "Ilham",
-            "email": "Eliseo@gardner.biz",
-            "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
-        },
-        {
-            "postId": 1,
-            "id": 2,
-            "name": "Melati",
-            "email": "Jayne_Kuhic@sydney.com",
-            "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
-        },
-        {
-            "postId": 1,
-            "id": 3,
-            "name": "Recky",
-            "email": "Nikita@garfield.biz",
-            "body": "quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores nam est\ncum et ducimus et vero voluptates excepturi deleniti ratione"
-        }
-    ],
-    "albums": [
-        {
-            "userId": 1,
-            "id": 1,
-            "title": "quidem molestiae enim",
-            "thumbnailUrl": "https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg",
-            "createdAt": 1666863190
-        },
-        {
-            "userId": 1,
-            "id": 2,
-            "title": "sunt qui excepturi placeat culpa",
-            "thumbnailUrl": "https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg",
-            "createdAt": 1666837333
-        },
-        {
-            "userId": 1,
-            "id": 3,
-            "title": "omnis laborum odio",
-            "thumbnailUrl": "https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg",
-            "createdAt": 1666837333
-        },
-        {
-            "userId": 2,
-            "id": 4,
-            "title": "non esse culpa molestiae omnis sed optio",
-            "thumbnailUrl": "https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg",
-            "createdAt": 1666837333
-        }
-    ],
-    "photos": [
-        {
-            "albumId": 1,
-            "id": 1,
-            "title": "accusamus beatae ad facilis cum similique qui sunt",
-            "url": "https://via.placeholder.com/600/92c952",
-            "thumbnailUrl": "https://via.placeholder.com/150/92c952",
-            "createdAt": 1666837333
-        },
-        {
-            "albumId": 1,
-            "id": 2,
-            "title": "reprehenderit est deserunt velit ipsam",
-            "url": "https://via.placeholder.com/600/771796",
-            "thumbnailUrl": "https://via.placeholder.com/150/771796",
-            "createdAt": 1666837333
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "name": "Bambang",
-            "username": "Pamungkas",
-            "email": "bambang@gmail.com",
-            "phone": "085243322433",
-            "profilImage": "https://randomuser.me/api/portraits/men/73.jpg"
-        },
-        {
-            "id": 2,
-            "name": "Julia Perez",
-            "username": "julia",
-            "email": "juliaperez@gmail.com",
-            "phone": "085243322422",
-            "profilImage": "https://randomuser.me/api/portraits/women/73.jpg"
-        }
-    ]
+  "posts": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "Selalu ada hal baik, meski dalam keburukan sekalipun. Manfaatkan."
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "Are you a Senior Software Engineer, freelance developer or just a highly ambitious developer living outside the U.S.?"
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "Manfaatkan waktumu untuk bisa upgrade skill untuk bisa mendapatkan skill yang tahan terhadap terhadap resesi. dan salah satu skill itu adalah programmer. KELASFULLSTACK kode kupon yang kita siapkan untuk kamu yang siap belajar hal baru dan skill yang tahan resesi. ada potingan 15% yuk join sekarang juga!!"
+    },
+    {
+      "userId": 1,
+      "id": 4,
+      "title": "Di kontrakan rumah 2 lantai dengan kmrtdr 3.kmar mandi 2...akses masuk hanya sepeda motor..area pelemgurih gamping Sleman belakang Honda naga mas motor..harga 8jt/th"
+    },
+    {
+      "userId": 2,
+      "id": 5,
+      "title": "WingtraOne is an easy-to-use mapping drone that gives you consistent, high-accuracy survey data while cutting costs."
+    },
+    {
+      "userId": 1,
+      "id": 6,
+      "title": "tes"
+    },
+    {
+      "userId": 1,
+      "id": 7,
+      "title": "Line graphs show how a continuous variable changes over time, for example, get trends in sales or profit margins each month, quarter, or year."
+    }
+  ],
+  "comments": [
+    {
+      "postId": 1,
+      "id": 1,
+      "name": "Ilham",
+      "email": "Eliseo@gardner.biz",
+      "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+    },
+    {
+      "postId": 1,
+      "id": 2,
+      "name": "Melati",
+      "email": "Jayne_Kuhic@sydney.com",
+      "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
+    },
+    {
+      "postId": 1,
+      "id": 3,
+      "name": "Recky",
+      "email": "Nikita@garfield.biz",
+      "body": "quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores nam est\ncum et ducimus et vero voluptates excepturi deleniti ratione"
+    }
+  ],
+  "albums": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "quidem molestiae enim",
+      "thumbnailUrl": "https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg",
+      "createdAt": 1666863190
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "sunt qui excepturi placeat culpa",
+      "thumbnailUrl": "https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg",
+      "createdAt": 1666837333
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "omnis laborum odio",
+      "thumbnailUrl": "https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg",
+      "createdAt": 1666837333
+    },
+    {
+      "userId": 2,
+      "id": 4,
+      "title": "non esse culpa molestiae omnis sed optio",
+      "thumbnailUrl": "https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg",
+      "createdAt": 1666837333
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 1,
+      "id": 1,
+      "title": "accusamus beatae ad facilis cum similique qui sunt",
+      "url": "https://via.placeholder.com/600/92c952",
+      "thumbnailUrl": "https://via.placeholder.com/150/92c952",
+      "createdAt": 1666837333
+    },
+    {
+      "albumId": 1,
+      "id": 2,
+      "title": "reprehenderit est deserunt velit ipsam",
+      "url": "https://via.placeholder.com/600/771796",
+      "thumbnailUrl": "https://via.placeholder.com/150/771796",
+      "createdAt": 1666837333
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Bambang",
+      "username": "Pamungkas",
+      "email": "bambang@gmail.com",
+      "phone": "085243322433",
+      "profilImage": "https://randomuser.me/api/portraits/men/73.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Julia Perez",
+      "username": "julia",
+      "email": "juliaperez@gmail.com",
+      "phone": "085243322422",
+      "profilImage": "https://randomuser.me/api/portraits/women/73.jpg"
+    }
+  ]
 }

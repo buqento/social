@@ -1,9 +1,14 @@
+import { useRouter } from "next/router"
+
 const Layout = ({ children }) => {
+    const router = useRouter()
     const Nav = () => {
         return (
-            <div className="bg-blue-500 sticky top-0 p-4 shadow">
+            <div
+                onClick={() => router.push("/")}
+                className="bg-blue-500 sticky top-0 p-4 shadow">
                 <span className="text-white text-2xl font-black">
-                Dashboard
+                    Dashboard
                 </span>
             </div>
         )

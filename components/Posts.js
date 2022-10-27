@@ -58,23 +58,6 @@ const Posts = ({ userId }) => {
         )
     }
 
-    const handlePost = () => {
-        const data = {
-            id: 4,
-            title: "tsssest",
-            author: "bv"
-        }
-        const url = "http://localhost:3001/posts"
-        const options = {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data)
-        }
-        fetch(url, options)
-            .then(response => response.json())
-            .then(data => { console.log(data); })
-    }
-
     return (
         <>
             <Script src='/js/index.min.js' />
@@ -101,21 +84,7 @@ const Posts = ({ userId }) => {
                         aria-controls="tabs-homeFill" aria-selected="true">Posts</a>
                 </li>
                 <li class="nav-item flex-auto text-center" role="presentation">
-                    <a href="#tabs-profileFill" class="
-      nav-link
-      w-full
-      block
-      font-medium
-      text-xs
-      leading-tight
-      uppercase
-      border-x-0 border-t-0 border-b-2 border-transparent
-      px-6
-      py-3
-      my-2
-      hover:border-transparent hover:bg-gray-100
-      focus:border-transparent
-    " id="tabs-profile-tabFill" data-bs-toggle="pill" data-bs-target="#tabs-profileFill" role="tab"
+                    <a href="#tabs-profileFill" class="nav-link w-full block font-medium text-xs leading-tight uppercase border-x-0 border-t-0 border-b-2 border-transparent px-6 py-3 my-2 hover:border-transparent hover:bg-gray-100 focus:border-transparent " id="tabs-profile-tabFill" data-bs-toggle="pill" data-bs-target="#tabs-profileFill" role="tab"
                         aria-controls="tabs-profileFill" aria-selected="false">Album</a>
                 </li>
 
@@ -123,7 +92,8 @@ const Posts = ({ userId }) => {
             <div class="tab-content" id="tabs-tabContentFill">
                 <div class="tab-pane fade show active" id="tabs-homeFill" role="tabpanel" aria-labelledby="tabs-home-tabFill">
                     <div className="space-y-2">
-                        {posts?.map(renderPost)}
+                        {posts?.sort((a, b) => (a.id > b.id ? -1 : 1))
+                            .map(renderPost)}
                     </div>
                 </div>
                 <div class="tab-pane fade" id="tabs-profileFill" role="tabpanel" aria-labelledby="tabs-profile-tabFill">
