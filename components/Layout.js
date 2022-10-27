@@ -1,19 +1,11 @@
-import { useRouter } from "next/router"
-
 const Layout = ({ children }) => {
-    const router = useRouter()
     const Nav = () => {
         return (
             <div
-                onClick={() => router.push("/")}
+                onClick={() => window.location.reload()}
                 className="cursor-pointer space-x-4 text-white font-black bg-blue-500 sticky top-0 p-4 shadow">
                 <span className="text-2xl">
-                    Dashboard
-                </span>
-                <span
-                    onClick={() => router.push("/post")}
-                    className="underline cursor-pointer">
-                    Create Post
+                    Home
                 </span>
             </div>
         )

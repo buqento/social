@@ -1,68 +1,46 @@
 import Script from "next/script"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import useFetch from "../hooks/useFetch"
 import Albums from "./Albums"
-import Button from "./Common"
-
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { useRouter } from "next/router"
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { PostCard, Profile } from "./Cards"
 
 const Posts = ({ userId }) => {
 
     const [posts] = useFetch(`http://localhost:3001/posts?userId=${userId}`)
+    const [user] = useFetch(`http://localhost:3001/users?id=${userId}`)
 
     const [selected, setSelected] = useState()
 
-    const router = useRouter()
-
-    const renderPost = (item, index) => {
+    const SummaryPost = ({ items, getPosts, selectedPost }) => {
         return (
-            <div class="flex justify-center" key={index}>
-                <div class="block p-6 rounded-lg shadow-lg bg-white w-full space-y-4">
-                    <p class="font-light text-lg line-clamp-3">
-                        {item.title}
-                    </p>
-                    <div className="space-x-2">
-                        <button type="button" className="inline-block px-6 py-4 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"
-                            onClick={() => setSelected(item)}
-                        >
-                            Detail
-                        </button>
-                        <Button
-                            className="bg-red-500"
-                            onClick={() => handleDeletePost(item.id)}>
-                            Delete
-                        </Button>
-                        <Button
-                            className="bg-gray-100 text-black"
-                            onClick={() => handleUpdatePost(item)}>
-                            Update
-                        </Button>
+            <div className="space-y-4">
+                {posts?.sort((a, b) => (a.id > b.id ? -1 : 1)).map((item, index) =>
+                    <div key={index}>
+                        <PostCard item={item} showButton={false} getPosts={getPosts} selectedPost={selectedPost} />
                     </div>
-                </div>
+                )}
             </div>
         )
     }
 
-    const handleDeletePost = id => {
-        const url = `http://localhost:3001/posts/${id}`
-        const options = { method: "DELETE" }
-        fetch(url, options)
-            .then(response => response.json())
-            .then(() => {
-                window.location.reload()
-                toast("Success Delete")
-            })
+    useEffect(() => { getPosts() }, [])
+    const getPosts = () => {
+        let url = `http://localhost:3001/posts?userId=${userId}`
+        fetch(url)
+            .then((response) => response.json())
+    }
+    const selectedPost = item => {
+        setSelected(item)
     }
 
-    const handleUpdatePost = item => {
-        router.push({
-            pathname: "/update",
-            query: {
-                id: item.id
-            }
-        })
+    const renderPost = () => {
+        return (
+            <div>
+                <SummaryPost items={posts} getPosts={getPosts} selectedPost={selectedPost} />
+            </div>
+        )
     }
 
     const renderComment = (item, index) => {
@@ -101,6 +79,8 @@ const Posts = ({ userId }) => {
         <>
             <Script src='/js/index.min.js' />
 
+            {user && <Profile item={user[0]} />}
+
             <ul class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4" id="tabs-tabFill"
                 role="tablist">
                 <li class="nav-item flex-auto text-center" role="presentation">
@@ -131,6 +111,12 @@ const Posts = ({ userId }) => {
             <div class="tab-content" id="tabs-tabContentFill">
                 <div class="tab-pane fade show active" id="tabs-homeFill" role="tabpanel" aria-labelledby="tabs-home-tabFill">
                     <div className="space-y-2">
+                        {
+                            posts?.length === 0 &&
+                            <div className="text-red-500">
+                                This user dont have any post!
+                            </div>
+                        }
                         {posts?.sort((a, b) => (a.id > b.id ? -1 : 1))
                             .map(renderPost)}
                     </div>

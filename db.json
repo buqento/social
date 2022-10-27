@@ -3,32 +3,7 @@
     {
       "userId": 1,
       "id": 1,
-      "title": "If you want to refresh the particular component instead of an entire page, you need to call the this.setState() method with an empty object."
-    },
-    {
-      "userId": 1,
-      "id": 2,
-      "title": "Forms is the most commonly used to enable users to log in"
-    },
-    {
-      "userId": 2,
-      "id": 3,
-      "title": "You must modern javascript such react/angular or C# as view engine, additional library and framework"
-    },
-    {
-      "userId": 2,
-      "id": 4,
-      "title": "Instead of passing a path to the resource you want to request into the fetch() call, you can create a request object using the Request() constructor, and pass that in as a fetch() method argument:"
-    },
-    {
-      "userId": 1,
-      "id": 5,
-      "title": "A POST, PUT or PATCH request should include a Content-Type: application/json header to use the JSON in the request body. Otherwise it will return a 2XX status code, but without changes being made to the data."
-    },
-    {
-      "userId": 1,
-      "id": 6,
-      "title": "Nama Fuji semakin dikenal luas di dunia hiburan. Setelah namanya viral, karier Fuji semakin meningkat. Ia kerap menghiasi layar kaca Tanah Air. Bahkan Fuji sudah terjun ke layar bioskop. Kini Fuji kembali menjajal hal baru."
+      "title": "Utilities for controlling the vertical alignment of an inline or table-cell box."
     }
   ],
   "comments": [],
@@ -96,6 +71,14 @@
       "email": "laura@gmail.com",
       "phone": "085243322422",
       "profilImage": "https://randomuser.me/api/portraits/women/73.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Lesti Kejora",
+      "username": "lesti",
+      "email": "lesti.kejora@gmail.com",
+      "phone": "085243322422",
+      "profilImage": "https://randomuser.me/api/portraits/women/66.jpg"
     }
   ]
 }

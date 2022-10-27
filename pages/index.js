@@ -14,7 +14,9 @@ const Users = () => {
     const handleRender = (item, index) => (
         <div
             key={index}
-            onClick={() => setSelected(item)}
+            onClick={() => {
+                setSelected(item)
+            }}
             className="w-full divide-y">
             <Item item={item} />
         </div>
@@ -28,15 +30,14 @@ const Users = () => {
                 </div>
                 <div className="mx-auto w-full col-span-2">
                     {
-                        !selected && <Summary />
+                        !selected &&
+                        <Summary />
                     }
                     {
                         selected &&
-                        <Profile item={selected} />
-                    }
-                    {
-                        selected &&
-                        <Posts userId={selected.id} />
+                        <div>
+                            <Posts userId={selected.id} />
+                        </div>
                     }
                 </div>
             </div>
