@@ -1,17 +1,16 @@
 import Script from "next/script"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import useFetch from "../hooks/useFetch"
 import Albums from "./Albums"
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 import { PostCard, Profile } from "./Cards"
 
 const Posts = ({ userId }) => {
 
-    const [posts] = useFetch(`http://localhost:3001/posts?userId=${userId}`)
-    const [user] = useFetch(`http://localhost:3001/users?id=${userId}`)
+    const baseUrl = `http://localhost:3001`
 
-    const [selected, setSelected] = useState()
+    const [posts] = useFetch(`${baseUrl}/posts?userId=${userId}`)
+
+    const [user] = useFetch(`${baseUrl}/users?id=${userId}`)
 
     const SummaryPost = ({ items, getPosts, selectedPost }) => {
         return (
@@ -33,41 +32,7 @@ const Posts = ({ userId }) => {
             .then((response) => response.json())
     }
 
-    const selectedPost = item => {
-        setSelected(item)
-    }
-
-    const renderComment = (item, index) => {
-        const { name, body } = item
-        return (
-            <div key={index} className="p-2">
-                <div className="font-medium">{name}</div>
-                <div className="font-light">{body}</div>
-            </div>
-        )
-    }
-
-    const Post = ({ item }) => {
-        const { id, title, body } = item
-        const [comments] = useFetch(`http://localhost:3001/comments?postId=${id}`)
-        return (
-            <div className="space-y-4">
-                <h1 className="text-2xl capitalize">{title}</h1>
-                <div>
-                    {body}
-                </div>
-                <div>
-                    {
-                        comments?.length > 0 &&
-                        <span class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-green-600 text-white rounded">{`${comments?.length} comment`}</span>
-                    }
-                    <div className="divide-y">
-                        {comments?.map(renderComment)}
-                    </div>
-                </div>
-            </div>
-        )
-    }
+    const selectedPost = item => { setSelected(item) }
 
     return (
         <>
@@ -105,20 +70,7 @@ const Posts = ({ userId }) => {
                     </div>
                 </div>
             </div>
-            
-            {
-                selected &&
-                <div class="offcanvas offcanvas-bottom fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 left-0 right-0 border-none h-1/3 max-h-full" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-                    <div class="offcanvas-header flex items-center justify-between p-4">
-                        <h5 class="offcanvas-title mb-0 leading-normal font-semibold" id="offcanvasBottomLabel">Detail</h5>
-                        <button type="button" class="btn-close box-content w-4 h-4 p-2 -my-5 -mr-2 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body flex-grow p-4 overflow-y-auto small">
-                        <Post item={selected} />
-                    </div>
-                </div>
-            }
-            <ToastContainer />
+
         </>
     )
 }

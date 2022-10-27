@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Moment from "react-moment"
+import useFetch from "../hooks/useFetch"
 import Button from "./Common"
 
 const UserCard = ({ item }) => {
@@ -38,7 +39,20 @@ export const Profile = ({ item }) => {
 
 export const PostCard = ({ item, getPosts, selectedPost, showButton = true }) => {
     const { id, title, createdAt } = item
+
     const [detail, setDetail] = useState(false)
+
+    const [comments] = useFetch(`http://localhost:3001/comments?postId=${id}`)
+
+    const renderComment = (item, index) => {
+        const { name, body } = item
+        return (
+            <div key={index} className="p-2">
+                <div className="">{name}</div>
+                <div className="font-light text-xs">{body}</div>
+            </div>
+        )
+    }
 
     const handleDeletePost = id => {
         const url = `http://localhost:3001/posts/${id}`
@@ -58,6 +72,20 @@ export const PostCard = ({ item, getPosts, selectedPost, showButton = true }) =>
                 <p class="text-gray-600 text-xs">
                     <Moment fromNow ago>{createdAt}</Moment>
                 </p>
+
+                {
+                    detail &&
+                    <div>
+                        {
+                            comments?.length > 0 &&
+                            <span class="inline-block py-1 px-2 leading-none text-center whitespace-nowrap align-baseline font-medium bg-gray-300 text-xs text-black rounded">{`${comments?.length} comment`}</span>
+                        }
+                        <div className="divide-y">
+                            {comments?.map(renderComment)}
+                        </div>
+                    </div>
+                }
+
                 <div className="flex ">
                     <div className="w-full">
                         {
