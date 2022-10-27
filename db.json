@@ -3,37 +3,35 @@
     {
       "userId": 1,
       "id": 1,
-      "title": "Selalu ada hal baik, meski dalam keburukan sekalipun. Manfaatkan."
+      "title": "If you want to refresh the particular component instead of an entire page, you need to call the this.setState() method with an empty object."
     },
     {
       "userId": 1,
-      "id": 3,
-      "title": "Manfaatkan waktumu untuk bisa upgrade skill untuk bisa mendapatkan skill yang tahan terhadap terhadap resesi. dan salah satu skill itu adalah programmer. KELASFULLSTACK kode kupon yang kita siapkan untuk kamu yang siap belajar hal baru dan skill yang tahan resesi. ada potingan 15% yuk join sekarang juga!!"
-    }
-  ],
-  "comments": [
-    {
-      "postId": 1,
-      "id": 1,
-      "name": "Ilham",
-      "email": "Eliseo@gardner.biz",
-      "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
-    },
-    {
-      "postId": 1,
       "id": 2,
-      "name": "Melati",
-      "email": "Jayne_Kuhic@sydney.com",
-      "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
+      "title": "Forms is the most commonly used to enable users to log in"
     },
     {
-      "postId": 1,
+      "userId": 2,
       "id": 3,
-      "name": "Recky",
-      "email": "Nikita@garfield.biz",
-      "body": "quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores nam est\ncum et ducimus et vero voluptates excepturi deleniti ratione"
+      "title": "You must modern javascript such react/angular or C# as view engine, additional library and framework"
+    },
+    {
+      "userId": 2,
+      "id": 4,
+      "title": "Instead of passing a path to the resource you want to request into the fetch() call, you can create a request object using the Request() constructor, and pass that in as a fetch() method argument:"
+    },
+    {
+      "userId": 1,
+      "id": 5,
+      "title": "A POST, PUT or PATCH request should include a Content-Type: application/json header to use the JSON in the request body. Otherwise it will return a 2XX status code, but without changes being made to the data."
+    },
+    {
+      "userId": 1,
+      "id": 6,
+      "title": "Nama Fuji semakin dikenal luas di dunia hiburan. Setelah namanya viral, karier Fuji semakin meningkat. Ia kerap menghiasi layar kaca Tanah Air. Bahkan Fuji sudah terjun ke layar bioskop. Kini Fuji kembali menjajal hal baru."
     }
   ],
+  "comments": [],
   "albums": [
     {
       "userId": 1,
@@ -85,7 +83,7 @@
   "users": [
     {
       "id": 1,
-      "name": "Bambang",
+      "name": "Bambang Pamungkas",
       "username": "Pamungkas",
       "email": "bambang@gmail.com",
       "phone": "085243322433",
@@ -93,9 +91,9 @@
     },
     {
       "id": 2,
-      "name": "Julia Perez",
-      "username": "julia",
-      "email": "juliaperez@gmail.com",
+      "name": "Cinta Laura",
+      "username": "laura",
+      "email": "laura@gmail.com",
       "phone": "085243322422",
       "profilImage": "https://randomuser.me/api/portraits/women/73.jpg"
     }

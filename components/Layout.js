@@ -6,9 +6,14 @@ const Layout = ({ children }) => {
         return (
             <div
                 onClick={() => router.push("/")}
-                className="bg-blue-500 sticky top-0 p-4 shadow">
-                <span className="text-white text-2xl font-black">
+                className="cursor-pointer space-x-4 text-white font-black bg-blue-500 sticky top-0 p-4 shadow">
+                <span className="text-2xl">
                     Dashboard
+                </span>
+                <span
+                    onClick={() => router.push("/post")}
+                    className="underline cursor-pointer">
+                    Create Post
                 </span>
             </div>
         )

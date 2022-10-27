@@ -6,12 +6,15 @@ import Button from "./Common"
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from "next/router"
 
 const Posts = ({ userId }) => {
 
     const [posts] = useFetch(`http://localhost:3001/posts?userId=${userId}`)
 
     const [selected, setSelected] = useState()
+
+    const router = useRouter()
 
     const renderPost = (item, index) => {
         return (
@@ -26,7 +29,16 @@ const Posts = ({ userId }) => {
                         >
                             Detail
                         </button>
-                        <Button className="bg-red-500" onClick={() => handleDeletePost(item.id)}>Delete</Button>
+                        <Button
+                            className="bg-red-500"
+                            onClick={() => handleDeletePost(item.id)}>
+                            Delete
+                        </Button>
+                        <Button
+                            className="bg-gray-100 text-black"
+                            onClick={() => handleUpdatePost(item)}>
+                            Update
+                        </Button>
                     </div>
                 </div>
             </div>
@@ -38,7 +50,19 @@ const Posts = ({ userId }) => {
         const options = { method: "DELETE" }
         fetch(url, options)
             .then(response => response.json())
-            .then(() => toast("Success Delete"))
+            .then(() => {
+                window.location.reload()
+                toast("Success Delete")
+            })
+    }
+
+    const handleUpdatePost = item => {
+        router.push({
+            pathname: "/update",
+            query: {
+                id: item.id
+            }
+        })
     }
 
     const renderComment = (item, index) => {
