@@ -3,8 +3,27 @@
         {
             "userId": 1,
             "id": 1,
-            "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-            "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+            "title": "Selalu ada hal baik, meski dalam keburukan sekalipun. Manfaatkan."
+        },
+        {
+            "userId": 1,
+            "id": 2,
+            "title": "Are you a Senior Software Engineer, freelance developer or just a highly ambitious developer living outside the U.S.?"
+        },
+        {
+            "userId": 1,
+            "id": 3,
+            "title": "Manfaatkan waktumu untuk bisa upgrade skill untuk bisa mendapatkan skill yang tahan terhadap terhadap resesi. dan salah satu skill itu adalah programmer. KELASFULLSTACK kode kupon yang kita siapkan untuk kamu yang siap belajar hal baru dan skill yang tahan resesi. ada potingan 15% yuk join sekarang juga!!"
+        },
+        {
+            "userId": 1,
+            "id": 4,
+            "title": "Di kontrakan rumah 2 lantai dengan kmrtdr 3.kmar mandi 2...akses masuk hanya sepeda motor..area pelemgurih gamping Sleman belakang Honda naga mas motor..harga 8jt/th"
+        },
+        {
+            "userId": 2,
+            "id": 5,
+            "title": "WingtraOne is an easy-to-use mapping drone that gives you consistent, high-accuracy survey data while cutting costs."
         }
     ],
     "comments": [
@@ -71,17 +90,19 @@
     "users": [
         {
             "id": 1,
-            "name": "Leanne Graham",
-            "username": "Bret",
-            "email": "Sincere@april.biz",
-            "phone": "085243322433"
+            "name": "Bambang",
+            "username": "Pamungkas",
+            "email": "bambang@gmail.com",
+            "phone": "085243322433",
+            "profilImage": "https://randomuser.me/api/portraits/men/73.jpg"
         },
         {
             "id": 2,
-            "name": "Bambang",
-            "username": "Bbg",
-            "email": "bambang@gmail.com",
-            "phone": "085243322422"
+            "name": "Julia Perez",
+            "username": "julia",
+            "email": "juliaperez@gmail.com",
+            "phone": "085243322422",
+            "profilImage": "https://randomuser.me/api/portraits/women/73.jpg"
         }
     ]
 }
