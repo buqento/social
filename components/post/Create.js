@@ -3,14 +3,19 @@ import Button from "../Common"
 
 const AddPost = ({ getPost, posts, selected }) => {
 
-
     const userId = 1
     const id = posts?.length + 1
+    const createdAt = Date.now()
     const [title, setTitle] = useState()
+    const url = "http://localhost:3001/posts"
 
     const handleCreate = () => {
-        const data = { userId, id, title }
-        const url = "http://localhost:3001/posts"
+        const data = {
+            userId,
+            id,
+            title,
+            createdAt
+        }
         const options = {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -25,14 +30,18 @@ const AddPost = ({ getPost, posts, selected }) => {
     }
 
     const handleUpdate = () => {
-        const data = { userId: 1, id: selected.id, title }
-        const url = `http://localhost:3001/posts/${selected.id}`
+        const data = {
+            userId: 1,
+            id: selected.id,
+            title,
+            createdAt
+        }
         const options = {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
         }
-        fetch(url, options)
+        fetch(`${url}/${selected.id}`, options)
             .then(response => response.json())
             .then(() => {
                 getPost()

@@ -7,7 +7,11 @@ const SummaryPost = ({ items, getPosts, selectedPost }) => {
         <div className="space-y-4">
             {items?.sort((a, b) => (a.id > b.id ? -1 : 1)).map((item, index) =>
                 <div key={index}>
-                    <PostCard item={item} showButton getPosts={getPosts} selectedPost={selectedPost} />
+                    <PostCard
+                        item={item}
+                        showButton
+                        getPosts={getPosts}
+                        selectedPost={selectedPost} />
                 </div>
             )}
         </div>
@@ -24,13 +28,17 @@ const Summary = ({ }) => {
             .then((response) => response.json())
             .then(data => setPosts(data))
     }
-    const selectedPost = item => {
-        setSelected(item)
-    }
+    const selectedPost = item => setSelected(item)
     return (
         <div className="space-y-4">
-            <AddPost getPost={getPosts} posts={posts} selected={selected} />
-            <SummaryPost items={posts} getPosts={getPosts} selectedPost={selectedPost} />
+            <AddPost
+                getPost={getPosts}
+                posts={posts}
+                selected={selected} />
+            <SummaryPost
+                items={posts}
+                getPosts={getPosts}
+                selectedPost={selectedPost} />
         </div>
     )
 }

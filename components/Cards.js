@@ -37,7 +37,7 @@ export const Profile = ({ item }) => {
 }
 
 export const PostCard = ({ item, getPosts, selectedPost, showButton = true }) => {
-    const { id, title } = item
+    const { id, title, createdAt } = item
     const [detail, setDetail] = useState(false)
 
     const handleDeletePost = id => {
@@ -49,21 +49,23 @@ export const PostCard = ({ item, getPosts, selectedPost, showButton = true }) =>
                 getPosts()
             })
     }
-
     return (
         <div class="flex justify-center">
             <div class="block p-6 rounded-lg border bg-white w-full space-y-2">
                 <p className={`font-light text-lg ${!detail ? 'line-clamp-1' : ''}`}>
                     {title}
                 </p>
+                <p class="text-gray-600 text-xs">
+                    <Moment fromNow ago>{createdAt}</Moment>
+                </p>
                 <div className="flex ">
                     <div className="w-full">
                         {
                             title.length > 80 &&
                             <Button
-                                className="text-black underline"
+                                className="bg-black"
                                 onClick={() => setDetail(!detail)}>
-                                {detail ? 'Hide' : 'Show More'}
+                                {detail ? 'Hide' : 'Show More'}s
                             </Button>
                         }
                     </div>
@@ -83,7 +85,6 @@ export const PostCard = ({ item, getPosts, selectedPost, showButton = true }) =>
                         </div>
                     }
                 </div>
-
             </div>
         </div>
     )
