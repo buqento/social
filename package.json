@@ -16,6 +16,7 @@
     "tw-elements": "^1.0.0-alpha12"
   },
   "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.2",
     "autoprefixer": "^10.4.12",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.0",
