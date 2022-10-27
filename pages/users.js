@@ -1,9 +1,9 @@
 import Item from "../components/Cards"
-import useGetdata from "../hooks/useFetch"
+import useFetch from "../hooks/useFetch"
 
 const Users = () => {
 
-    const [users] = useGetdata(`http://localhost:3001/users`)
+    const [users] = useFetch(`http://localhost:3001/users`)
 
     const handleRender = (item, index) => (
         <div key={index} className="w-full divide-y">
