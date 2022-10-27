@@ -2,6 +2,10 @@ import Script from "next/script"
 import { useState } from "react"
 import useFetch from "../hooks/useFetch"
 import Albums from "./Albums"
+import Button from "./Common"
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Posts = ({ userId }) => {
 
@@ -16,14 +20,25 @@ const Posts = ({ userId }) => {
                     <p class="font-light text-lg line-clamp-3">
                         {item.title}
                     </p>
-                    <button type="button" className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"
-                        onClick={() => setSelected(item)}
-                    >
-                        View Detail
-                    </button>
+                    <div className="space-x-2">
+                        <button type="button" className="inline-block px-6 py-4 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"
+                            onClick={() => setSelected(item)}
+                        >
+                            Detail
+                        </button>
+                        <Button className="bg-red-500" onClick={() => handleDeletePost(item.id)}>Delete</Button>
+                    </div>
                 </div>
             </div>
         )
+    }
+
+    const handleDeletePost = id => {
+        const url = `http://localhost:3001/posts/${id}`
+        const options = { method: "DELETE" }
+        fetch(url, options)
+            .then(response => response.json())
+            .then(() => toast("Success Delete"))
     }
 
     const renderComment = (item, index) => {
@@ -114,7 +129,7 @@ const Posts = ({ userId }) => {
                     </div>
                 </div>
             }
-
+            <ToastContainer />
         </>
     )
 }
