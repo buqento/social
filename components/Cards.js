@@ -18,9 +18,9 @@ const UserCard = ({ item }) => {
 export const Profile = ({ item }) => {
     const { name, username, email, phone, profilImage } = item
     return (
-        <div className="p-2">
+        <div className="p-4 text-center border rounded-t-lg bg-blue-200">
             <img
-                className="rounded-full border"
+                className="rounded-full border mx-auto"
                 src={profilImage}
                 alt="user" />
             <div>
