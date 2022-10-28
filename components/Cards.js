@@ -85,6 +85,7 @@ export const PostCard = ({ item, getPosts, selectedPost, showButton = true }) =>
             .then(response => response.json())
             .then(() => {
                 getPosts()
+                window.location.reload()
             })
     }
 
@@ -142,11 +143,11 @@ export const PostCard = ({ item, getPosts, selectedPost, showButton = true }) =>
     )
 }
 
-export const AlbumCard = ({ item }) => {
+export const AlbumCard = ({ item, getDetail }) => {
     const { title, thumbnailUrl, createdAt } = item
     return (
-        <div class="flex justify-center">
-            <div class="w-full flex flex-col md:flex-row rounded-lg bg-white shadow-lg">
+        <div class="cursor-pointer flex justify-center" onClick={() => getDetail(item)}>
+            <div class="w-full flex flex-col md:flex-row rounded-lg bg-white">
                 <img class="h-32 object-cover w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src={thumbnailUrl} alt="" />
                 <div class="p-6 flex flex-col justify-start">
                     <h5 class="text-gray-900 text-xl font-medium mb-2 capitalize">{title}</h5>

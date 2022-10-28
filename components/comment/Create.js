@@ -28,6 +28,7 @@ const AddComment = ({ getPosts, postId }) => {
             .then(() => {
                 setBody("")
                 getPosts()
+                window.location.reload()
             })
     }
 

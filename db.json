@@ -39,8 +39,8 @@
     {
       "userId": 1,
       "id": 1666918358322,
-      "title": "xxxxxxxxxxxxxxxxx",
-      "createdAt": 1666918358322
+      "title": "Menjelang G20 di Bali dan sekitarnya, XL Axiata mengaktifkan layanan data dan internet super cepat 5G tersebut sudah bisa diakses oleh para delegasi dan masyarakat dengan menggunakan smartphone 5G. Layanan 5G dari XL Axiata ini akan bisa diakses di 17 titik.",
+      "createdAt": 1666919180793
     }
   ],
   "comments": [
@@ -58,95 +58,11 @@
       "body": "harum non quasi et ratione\ntempore iure ex voluptates in ratione\nharum architecto fugit inventore cupiditate\nvoluptates magni quo et"
     },
     {
-      "postId": 5,
-      "id": 1666917570299,
-      "name": "natasha",
-      "body": "xxxxxxxxxxxxx",
-      "createdAt": 1666917570299
-    },
-    {
-      "postId": 5,
-      "id": 1666917597428,
-      "name": "natasha",
-      "body": "ddddddddddd",
-      "createdAt": 1666917597428
-    },
-    {
-      "postId": 5,
-      "id": 1666917653359,
-      "name": "natasha",
-      "body": "yes",
-      "createdAt": 1666917653359
-    },
-    {
-      "postId": 5,
-      "id": 1666917665480,
-      "name": "natasha",
-      "body": "yeshhh",
-      "createdAt": 1666917665480
-    },
-    {
-      "postId": 4,
-      "id": 1666917686992,
-      "name": "natasha",
-      "body": "hhhhh",
-      "createdAt": 1666917686992
-    },
-    {
-      "postId": 4,
-      "id": 1666917704129,
-      "name": "natasha",
-      "body": "alright",
-      "createdAt": 1666917704129
-    },
-    {
-      "postId": 4,
-      "id": 1666918072915,
-      "name": "natasha",
-      "body": "ok",
-      "createdAt": 1666918072915
-    },
-    {
       "postId": 1666918313675,
-      "id": 1666918320375,
-      "name": "natasha",
-      "body": "xxxxxxxxxxxxxx",
-      "createdAt": 1666918320375
-    },
-    {
-      "postId": 1666918358322,
-      "id": 1666918584646,
+      "id": 1666919226763,
       "name": "Bambang",
-      "body": "ok",
-      "createdAt": 1666918584646
-    },
-    {
-      "postId": 1666918358322,
-      "id": 1666918717460,
-      "name": "Bambang",
-      "body": "ok",
-      "createdAt": 1666918717460
-    },
-    {
-      "postId": 1666918358322,
-      "id": 1666918718693,
-      "name": "Bambang",
-      "body": "ok",
-      "createdAt": 1666918718693
-    },
-    {
-      "postId": 1666918358322,
-      "id": 1666918800072,
-      "name": "Bambang",
-      "body": "dfdsfdsfds",
-      "createdAt": 1666918800072
-    },
-    {
-      "postId": 1666918358322,
-      "id": 1666918819074,
-      "name": "Bambang",
-      "body": "fdsfdsfs",
-      "createdAt": 1666918819074
+      "body": "yes",
+      "createdAt": 1666919226763
     }
   ],
   "albums": [
@@ -184,16 +100,56 @@
       "albumId": 1,
       "id": 1,
       "title": "accusamus beatae ad facilis cum similique qui sunt",
-      "url": "https://via.placeholder.com/600/92c952",
-      "thumbnailUrl": "https://via.placeholder.com/150/92c952",
+      "url": "https://picsum.photos/id/33/200/300",
+      "thumbnailUrl": "https://picsum.photos/id/33/200/300",
       "createdAt": 1666837333
     },
     {
-      "albumId": 1,
+      "albumId": 2,
       "id": 2,
       "title": "reprehenderit est deserunt velit ipsam",
-      "url": "https://via.placeholder.com/600/771796",
-      "thumbnailUrl": "https://via.placeholder.com/150/771796",
+      "url": "https://picsum.photos/id/44/200/300",
+      "thumbnailUrl": "https://picsum.photos/id/44/200/300",
+      "createdAt": 1666837333
+    },
+    {
+      "albumId": 3,
+      "id": 3,
+      "title": "reprehenderit est deserunt velit ipsam",
+      "url": "https://picsum.photos/id/55/200/300",
+      "thumbnailUrl": "https://picsum.photos/id/55/200/300",
+      "createdAt": 1666837333
+    },
+    {
+      "albumId": 4,
+      "id": 4,
+      "title": "reprehenderit est deserunt velit ipsam",
+      "url": "https://picsum.photos/id/66/200/300",
+      "thumbnailUrl": "https://picsum.photos/id/66/200/300",
+      "createdAt": 1666837333
+    },
+    {
+      "albumId": 5,
+      "id": 5,
+      "title": "reprehenderit est deserunt velit ipsam",
+      "url": "https://picsum.photos/id/77/200/300",
+      "thumbnailUrl": "https://picsum.photos/id/77/200/300",
+      "createdAt": 1666837333
+    },
+    {
+      "albumId": 6,
+      "id": 6,
+      "title": "reprehenderit est deserunt velit ipsam",
+      "url": "https://picsum.photos/id/88/200/300",
+      "thumbnailUrl": "https://picsum.photos/id/88/200/300",
+      "createdAt": 1666837333
+    },
+    {
+      "albumId": 7,
+      "id": 7,
+      "title": "reprehenderit est deserunt velit ipsam",
+      "url": "https://picsum.photos/id/237/200/300",
+      "thumbnailUrl": "https://picsum.photos/id/237/200/300",
       "createdAt": 1666837333
     }
   ],
