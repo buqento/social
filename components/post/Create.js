@@ -1,10 +1,9 @@
 import { useState } from "react"
 import Button from "../Common"
 
-const AddPost = ({ getPost, posts, selected }) => {
+const AddPost = ({ getPost, selected }) => {
 
     const userId = 1
-    const id = posts?.length + 1
     const createdAt = Date.now()
     const [title, setTitle] = useState()
     const url = "http://localhost:3001/posts"
@@ -12,7 +11,7 @@ const AddPost = ({ getPost, posts, selected }) => {
     const handleCreate = () => {
         const data = {
             userId,
-            id,
+            id: createdAt,
             title,
             createdAt
         }

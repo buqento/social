@@ -3,6 +3,7 @@ import { useEffect } from "react"
 import useFetch from "../hooks/useFetch"
 import Albums from "./Albums"
 import { PostCard, Profile } from "./Cards"
+import AddComment from "./comment/Create"
 
 const Posts = ({ userId }) => {
 
@@ -20,6 +21,7 @@ const Posts = ({ userId }) => {
                         <PostCard item={item} showButton={false} getPosts={getPosts} selectedPost={selectedPost} />
                     </div>
                 )}
+
             </div>
         )
     }
@@ -27,7 +29,7 @@ const Posts = ({ userId }) => {
     useEffect(() => { getPosts() }, [])
 
     const getPosts = () => {
-        let url = `http://localhost:3001/posts?userId=${userId}`
+        let url = `${baseUrl}/posts?userId=${userId}`
         fetch(url)
             .then((response) => response.json())
     }
