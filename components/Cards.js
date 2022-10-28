@@ -107,8 +107,8 @@ export const PostCard = ({ item, getPosts, selectedPost, showButton = true }) =>
                         }
                         <div className="divide-y">
                             {comments?.map(renderComment)}
-                            <AddComment getPost={getPosts} postId={id} />
                         </div>
+                        <AddComment getPosts={getPosts} postId={id} />
 
                     </div>
                 }

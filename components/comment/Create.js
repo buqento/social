@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Button from "../Common"
 
-const AddComment = ({ getPost, postId }) => {
+const AddComment = ({ getPosts, postId }) => {
 
     const createdAt = Date.now()
     const name = "Bambang"
@@ -26,8 +26,8 @@ const AddComment = ({ getPost, postId }) => {
         fetch(`${baseUrl}/comments`, options)
             .then(response => response.json())
             .then(() => {
-                getPost()
                 setBody("")
+                getPosts()
             })
     }
 
