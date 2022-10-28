@@ -2,6 +2,9 @@ import { useState } from "react"
 import Moment from "react-moment"
 import useFetch from "../hooks/useFetch"
 import Button from "./Common"
+import { FaRegTrashAlt } from "react-icons/fa"
+
+const baseUrl = `http://localhost:3001`
 
 const UserCard = ({ item }) => {
     const { name, email, profilImage } = item
@@ -42,20 +45,26 @@ export const PostCard = ({ item, getPosts, selectedPost, showButton = true }) =>
 
     const [detail, setDetail] = useState(false)
 
-    const [comments] = useFetch(`http://localhost:3001/comments?postId=${id}`)
+    const [comments] = useFetch(`${baseUrl}/comments?postId=${id}`)
 
     const renderComment = (item, index) => {
-        const { name, body } = item
+        const { id, name, body } = item
         return (
-            <div key={index} className="p-2">
-                <div className="">{name}</div>
-                <div className="font-light text-xs">{body}</div>
+            <div key={index} className="flex space-x-4 p-4">
+                <div className="w-full">
+                    <div className="">{name}</div>
+                    <div className="font-light text-xs">{body}</div>
+                </div>
+                <FaRegTrashAlt
+                    className="cursor-pointer text-red-600"
+                    onClick={() => handleDeleteComment(id)}
+                />
             </div>
         )
     }
 
     const handleDeletePost = id => {
-        const url = `http://localhost:3001/posts/${id}`
+        const url = `${baseUrl}/posts/${id}`
         const options = { method: "DELETE" }
         fetch(url, options)
             .then(response => response.json())
@@ -63,6 +72,18 @@ export const PostCard = ({ item, getPosts, selectedPost, showButton = true }) =>
                 getPosts()
             })
     }
+
+    const handleDeleteComment = id => {
+        console.log(id);
+        const url = `${baseUrl}/comments/${id}`
+        const options = { method: "DELETE" }
+        fetch(url, options)
+            .then(response => response.json())
+            .then(() => {
+                getPosts()
+            })
+    }
+
     return (
         <div class="flex justify-center">
             <div class="block p-6 rounded-lg border bg-white w-full space-y-2">
@@ -93,7 +114,7 @@ export const PostCard = ({ item, getPosts, selectedPost, showButton = true }) =>
                             <Button
                                 className="bg-black"
                                 onClick={() => setDetail(!detail)}>
-                                {detail ? 'Hide' : 'Show More'}s
+                                {detail ? 'Hide' : 'Show More'}
                             </Button>
                         }
                     </div>
